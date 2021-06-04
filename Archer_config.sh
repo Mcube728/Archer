@@ -17,7 +17,7 @@ echo "_____________________________________"
 echo 
 echo "CONFIGURING i3 WINDOW MANAGER..."
 echo
-cp i3_config .config/i3/config
+cp -f i3_config /home/mikhail/.config/i3/config
 echo "CONFIGURED i3 WM! :)"
 echo
 
