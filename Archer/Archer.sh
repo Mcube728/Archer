@@ -12,21 +12,13 @@ echo " /_/    \_\_|  \___|_| |_|\___|_|    "
 echo
 echo " Arch Linux Post Installation Script "
 echo "_____________________________________"
+
 # This section takes care of the xorg server which is responsible for handling the programs that handle Graphical User Interfaces(GUIs).
 echo
 echo "INSTALLING XORG..."
 echo
-
-XORG_PKGS={
-	'xorg-server'	# XOrg Server
-	'xorg-xinit'	# XOrg init
-}
-
-for XORG_PKG in "${XORG_PKGS[@]}"; do
-	echo "Installing: ${XORG_PKG}"
-	sudo pacman -S "$XORG_PKG" --noconfirm --needed
-done
-
+sudo pacman -S xorg-server
+sudo pacman -S xorg-xinit
 echo 
 echo "DONE INSTALLING XORG! :)"
 echo
@@ -35,29 +27,20 @@ echo
 echo
 echo "INSTALLING WINDOW MANAGER i3..."
 echo
-
-XFCE_PKGS={
-	'i3'			# XFCE desktop environment
-	'dmenu'			# Graphical Text editor
-	'engrampa'		# Archive manager
-	'qpdfview'		# Tabbed PDF Viewer
-	'firefox' 		# Web-Browser
-	'lynx'			# Terminal Web-Browser
-	'ffmpeg'	
-	'rxvt-unicode' 		# Terminal Emulator
-	'thunar' 		# File Manager
-	'htop' 			# System resource monitor
-	'neofetch' 		# Shows system info
-	'git' 
-	'wget'
-	'xfce4-screenshooter' 	# Screensot Application
-}
-
-for XFCE_PKG in "${XFCE_PKGS[@]}"; do
-	echo "Installing: ${XFCE_PKG}"
-	sudo pacman -S "$XFCE_PKG" --noconfirm --needed 
-done
-
+sudo pacman -S i3
+sudo pacman -S dmenu
+sudo pacman -S engrampa
+sudo pacman -S qdfview
+sudo pacman -S firefox
+sudo pacman -S lynx
+sudo pacman -S ffmpeg
+sudo pacman -S rxvt-unicode
+sudo pacman -S thunar
+sudo pacman -S htop
+sudo pacman -S neofetch
+sudo pacman -S git
+sudo pacman -S wget
+sudo pacman -S xfce4-screenshooter
 echo
 echo "DONE INSTALLING WINDOW MANAGER i3! :)"
 echo
@@ -66,18 +49,9 @@ echo
 echo
 echo "INSTALLING DISPLAY MANAGER-LIGHTDM..."
 echo
-
-LIGHT_PKGS={
-	'lightdm'			# LightDM Display Manager
-	'lightdm-gtk-greeter'		# LightDM Greeter
-	'lightdm-gtk-greeter-settings'	# LightDM Greeter Settings
-}
-
-for LIGHT_PKG in "${LIGHT_PKGS[@]}"; do
-	echo "Installing: ${LIGHT_PKG}"
-	sudo pacman -S "$LIGHT_PKG" --noconfirm --needed
-done
-
+sudo pacman -S lightdm
+sudo pacman -S lightdm-gtk-greeter
+sudo pacman -S lightdm-gtk-greeter-settings
 echo
 echo "DONE INSTALLING DISPLAY MANAGER-LIGHTDM! :)"
 echo
@@ -86,21 +60,15 @@ echo
 echo 
 echo "INSTALLING AUDIO COMPONENTS..."
 echo
-
-AUDIO_PKGS={
-	'alsa-utils' 		# ALSA componenets. https://alsa.opensrc.org
-	'alsa-plugins'	 	# ALSA plugins
-	'pulseaudio' 		# Pulse Audio Sound Components
-	'pulseaudio-alsa' 	# ALSA configuration for pulse audio
-	'pavucontrol' 		# Pulse Audio Volume Control
-	'volumeicon' 		# System tray volume control
-}
-
-for AUDIO_PKG in "${AUDIO_PKGS[@]}"; do
-	echo "Installing: ${AUDIO_PKG}"
-	sudo pacman -S "$AUDIO_PKG" --noconfirm --needed
-done
-
+sudo pacman -S alsa-utils
+sudo pacman -S alsa-plugins
+sudo pacman -S pulseaudio
+sudo pacman -S pulseaudio-alsa
+sudo pacman -S pavucontrol
+sudo pacman -S volumeicon
+echo
+echo "DONE INSTALLING AUDIO COMPONENTS! :)"
+echo"======================================================================"
 echo
 echo "DONE INSTALLING THE APPLICATIONS! YOU CAN NOW REBOOT THE SYSTEM AND THEN LAUNCH THE CONFIGURATION SCRIPT FOR THE WM AND TERMINAL. :)"
 echo
