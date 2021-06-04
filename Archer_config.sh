@@ -3,7 +3,7 @@
 # Date: 04/06/2021
 # Time: 3:48 PM
 # This is a script for configuring the i3 WM and the URxvt Terminal. This is to be run after you reboot the system. 
-
+clear
 echo "                    _                "
 echo "     /\            | |               "
 echo "    /  \   _ __ ___| |__   ___ _ __  "
@@ -24,6 +24,7 @@ echo
 echo
 echo "CONFIGURING URXVT TERMINAL EMULATOR"
 echo
-cp Xresources .Xresources
+cp Xresources /home/mikhail/.Xresources
+xrdb /home/mikhail/.Xresources
 echo "CONFIGURED URXVT TERMINAL EMULATOR! :)"
 

@@ -3,6 +3,7 @@
 # Date: 07/05/2021
 # Time: 11:48 PM
 # This is a script meant to install a few necessary packages along with some minor configuration so that you can have a basic install of Arch linux.
+clear
 echo "                    _                "
 echo "     /\            | |               "
 echo "    /  \   _ __ ___| |__   ___ _ __  "
@@ -14,12 +15,12 @@ echo " Arch Linux Post Installation Script "
 echo "_____________________________________"
 
 # This section takes care of the xorg server which is responsible for handling the programs that handle Graphical User Interfaces(GUIs).
-sudo pacman -Syyu -y
+yes | sudo pacman -Syyu 
 echo
 echo "INSTALLING XORG..."
 echo
-sudo pacman -S xorg-server -y
-sudo pacman -S xorg-xinit -y
+yes | sudo pacman -S xorg-server 
+yes | sudo pacman -S xorg-xinit 
 echo 
 echo "DONE INSTALLING XORG! :)"
 echo
@@ -28,20 +29,20 @@ echo
 echo
 echo "INSTALLING WINDOW MANAGER i3..."
 echo
-sudo pacman -S i3 -y
-sudo pacman -S dmenu -y
-sudo pacman -S engrampa -y
-sudo pacman -S qdfview -y 
-sudo pacman -S firefox -y 
-sudo pacman -S lynx -y 
-sudo pacman -S ffmpeg -y
-sudo pacman -S rxvt-unicode -y
-sudo pacman -S thunar -y
-sudo pacman -S htop -y
-sudo pacman -S neofetch -y
-sudo pacman -S git -y
-sudo pacman -S wget -y
-sudo pacman -S xfce4-screenshooter -y
+yes | sudo pacman -S i3
+yes | sudo pacman -S dmenu 
+yes | sudo pacman -S engrampa
+yes | sudo pacman -S qdfview  
+yes | sudo pacman -S firefox 
+yes | sudo pacman -S lynx 
+yes | sudo pacman -S ffmpeg 
+yes | sudo pacman -S rxvt-unicode 
+yes | sudo pacman -S thunar 
+yes | sudo pacman -S htop 
+yes | sudo pacman -S neofetch
+yes | sudo pacman -S git 
+yes | sudo pacman -S wget 
+yes | sudo pacman -S xfce4-screenshooter 
 echo
 echo "DONE INSTALLING WINDOW MANAGER i3! :)"
 echo
@@ -50,9 +51,9 @@ echo
 echo
 echo "INSTALLING DISPLAY MANAGER-LIGHTDM..."
 echo
-sudo pacman -S lightdm -y
-sudo pacman -S lightdm-gtk-greeter -y
-sudo pacman -S lightdm-gtk-greeter-settings -y
+yes | sudo pacman -S lightdm 
+yes | sudo pacman -S lightdm-gtk-greeter 
+yes | sudo pacman -S lightdm-gtk-greeter-settings 
 echo
 echo "DONE INSTALLING DISPLAY MANAGER-LIGHTDM! :)"
 echo
@@ -61,15 +62,15 @@ echo
 echo 
 echo "INSTALLING AUDIO COMPONENTS..."
 echo
-sudo pacman -S alsa-utils -y
-sudo pacman -S alsa-plugins -y
-sudo pacman -S pulseaudio -y
-sudo pacman -S pulseaudio-alsa -y
-sudo pacman -S pavucontrol -y
-sudo pacman -S volumeicon -y
+yes | sudo pacman -S alsa-utils 
+yes | sudo pacman -S alsa-plugins 
+yes | sudo pacman -S pulseaudio 
+yes | sudo pacman -S pulseaudio-alsa 
+yes | sudo pacman -S pavucontrol 
+yes | sudo pacman -S volumeicon 
 echo
 echo "DONE INSTALLING AUDIO COMPONENTS! :)"
-echo"======================================================================"
+echo "======================================================================"
 echo
 echo "DONE INSTALLING THE APPLICATIONS! YOU CAN NOW REBOOT THE SYSTEM AND THEN LAUNCH THE CONFIGURATION SCRIPT FOR THE WM AND TERMINAL. :)"
 echo
