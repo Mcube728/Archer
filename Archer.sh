@@ -19,8 +19,8 @@ yes | sudo pacman -Syyu
 echo
 echo "INSTALLING XORG..."
 echo
-yes | sudo pacman -S xorg-server 
-yes | sudo pacman -S xorg-xinit 
+yes | sudo pacman -S xorg-server --noconfirm
+yes | sudo pacman -S xorg-xinit --noconfirm
 echo 
 echo "DONE INSTALLING XORG! :)"
 echo
@@ -29,20 +29,20 @@ echo
 echo
 echo "INSTALLING WINDOW MANAGER i3..."
 echo
-yes | sudo pacman -S i3
-yes | sudo pacman -S dmenu 
-yes | sudo pacman -S engrampa
-yes | sudo pacman -S qdfview  
-yes | sudo pacman -S firefox 
-yes | sudo pacman -S lynx 
-yes | sudo pacman -S ffmpeg 
-yes | sudo pacman -S rxvt-unicode 
-yes | sudo pacman -S thunar 
-yes | sudo pacman -S htop 
-yes | sudo pacman -S neofetch
-yes | sudo pacman -S git 
-yes | sudo pacman -S wget 
-yes | sudo pacman -S xfce4-screenshooter 
+yes | sudo pacman -S i3 --noconfirm
+yes | sudo pacman -S dmenu --noconfirm
+yes | sudo pacman -S engrampar --noconfirm
+yes | sudo pacman -S qdfview   --noconfirm
+yes | sudo pacman -S firefox  --noconfirm
+yes | sudo pacman -S lynx  --noconfirm
+yes | sudo pacman -S ffmpeg  --noconfirm
+yes | sudo pacman -S rxvt-unicode  --noconfirm
+yes | sudo pacman -S thunar  --noconfirm
+yes | sudo pacman -S htop  --noconfirm
+yes | sudo pacman -S neofetch --noconfirm
+yes | sudo pacman -S git  --noconfirm
+yes | sudo pacman -S wget  --noconfirm
+yes | sudo pacman -S xfce4-screenshooter  --noconfirm
 echo
 echo "DONE INSTALLING WINDOW MANAGER i3! :)"
 echo
@@ -51,9 +51,9 @@ echo
 echo
 echo "INSTALLING DISPLAY MANAGER-LIGHTDM..."
 echo
-yes | sudo pacman -S lightdm 
-yes | sudo pacman -S lightdm-gtk-greeter 
-yes | sudo pacman -S lightdm-gtk-greeter-settings 
+yes | sudo pacman -S lightdm  --noconfirm
+yes | sudo pacman -S lightdm-gtk-greeter  --noconfirm
+yes | sudo pacman -S lightdm-gtk-greeter-settings  --noconfirm
 echo
 echo "DONE INSTALLING DISPLAY MANAGER-LIGHTDM! :)"
 echo
@@ -62,12 +62,12 @@ echo
 echo 
 echo "INSTALLING AUDIO COMPONENTS..."
 echo
-yes | sudo pacman -S alsa-utils 
-yes | sudo pacman -S alsa-plugins 
-yes | sudo pacman -S pulseaudio 
-yes | sudo pacman -S pulseaudio-alsa 
-yes | sudo pacman -S pavucontrol 
-yes | sudo pacman -S volumeicon 
+yes | sudo pacman -S alsa-utils  --noconfirm
+yes | sudo pacman -S alsa-plugins  --noconfirm
+yes | sudo pacman -S pulseaudio  --noconfirm
+yes | sudo pacman -S pulseaudio-alsa  --noconfirm
+yes | sudo pacman -S pavucontrol  --noconfirm
+yes | sudo pacman -S volumeicon  --noconfirm
 echo
 echo "DONE INSTALLING AUDIO COMPONENTS! :)"
 echo "======================================================================"
