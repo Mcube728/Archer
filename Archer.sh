@@ -46,6 +46,9 @@ yes | sudo pacman -S xfce4-screenshooter  --noconfirm
 yes | sudo pacman -S libreoffice --noconfirm
 yes | sudo pacman -S foliate --noconfirm
 yes | sudo pacman -S feh --noconfirm
+yes | sudo pacman -S bashtop --noconfirm
+yes | sudo pacman -S lxappearance --noconfirm
+yes | sudo pacman -S gnome-themes-extra --noconfirm
 echo
 echo "DONE INSTALLING WINDOW MANAGER i3! :)"
 echo
