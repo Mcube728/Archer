@@ -17,7 +17,7 @@ echo "_____________________________________"
 echo 
 echo "CONFIGURING i3 WINDOW MANAGER..."
 echo
-cp -f i3_config /home/mikhail/.config/i3/config
+cp -f i3_config ~/.config/i3/config
 echo "CONFIGURED i3 WM! :)"
 echo
 
@@ -25,6 +25,11 @@ echo
 echo "CONFIGURING URXVT TERMINAL EMULATOR"
 echo
 cp Xresources /home/mikhail/.Xresources
-xrdb /home/mikhail/.Xresources
+xrdb ~/.Xresources
 echo "CONFIGURED URXVT TERMINAL EMULATOR! :)"
+mkdir ~/.config/home
+cp -r Startpage ~/.config/home
+cp -f Wallpaper.png ~/.config/home/Wallpaper.png
 
+echo "DONE CONFIGURING SYSTEM!"
+echo "THANK YOU FOR USING ARCHER!! :)"

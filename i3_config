@@ -212,4 +212,4 @@ floating_minimum_size 650 x 450
 floating_maximum_size 700 x 500
 floating_modifier Mod4
 
-
+exec_always feh --bg-scale ~/.config/home/Wallpaper.png

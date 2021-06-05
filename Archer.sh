@@ -43,6 +43,9 @@ yes | sudo pacman -S neofetch --noconfirm
 yes | sudo pacman -S git  --noconfirm
 yes | sudo pacman -S wget  --noconfirm
 yes | sudo pacman -S xfce4-screenshooter  --noconfirm
+yes | sudo pacman -S libreoffice --noconfirm
+yes | sudo pacman -S foliate --noconfirm
+yes | sudo pacman -S feh --noconfirm
 echo
 echo "DONE INSTALLING WINDOW MANAGER i3! :)"
 echo
