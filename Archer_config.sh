@@ -27,9 +27,5 @@ echo
 cp Xresources /home/mikhail/.Xresources
 xrdb ~/.Xresources
 echo "CONFIGURED URXVT TERMINAL EMULATOR! :)"
-mkdir ~/.config/home
-cp -r Startpage ~/.config/home
-cp -f Wallpaper.png ~/.config/home/Wallpaper.png
-
 echo "DONE CONFIGURING SYSTEM!"
 echo "THANK YOU FOR USING ARCHER!! :)"
