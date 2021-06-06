@@ -74,6 +74,7 @@ yes | sudo pacman -S pulseaudio  --noconfirm
 yes | sudo pacman -S pulseaudio-alsa  --noconfirm
 yes | sudo pacman -S pavucontrol  --noconfirm
 yes | sudo pacman -S volumeicon  --noconfirm
+
 echo
 echo "DONE INSTALLING AUDIO COMPONENTS! :)"
 echo "======================================================================"
