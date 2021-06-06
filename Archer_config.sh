@@ -27,5 +27,10 @@ echo
 cp Xresources /home/mikhail/.Xresources
 xrdb ~/.Xresources
 echo "CONFIGURED URXVT TERMINAL EMULATOR! :)"
+
+echo "SETTING FIREFOX STARTPAGE..."
+mkdir ~/.config/startpage
+chmod +x ~/.config/startpage/startpage.sh
+source ~/.config/startpage/startpage.sh
 echo "DONE CONFIGURING SYSTEM!"
 echo "THANK YOU FOR USING ARCHER!! :)"

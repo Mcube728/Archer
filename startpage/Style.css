@@ -1,0 +1,83 @@
+body {
+	margin: 0px;
+	background-color: #000000;
+}
+
+.container {
+	width: 100vw;/*vw and vh stand for viewport width and viewport height respectively.*/
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  border: solid 2px #313131;
+  width:500px;
+}
+
+form input[type="search"] {
+  box-sizing: border-box;
+  font-weight: bold;
+  border: none;
+  font: inherit;
+  padding: .5em .25em;
+}
+
+form label {
+  padding: 0.25em;
+  background-color: #313131;
+  color: white;
+  font-size: 0.75em;
+}
+
+form input::placeholder {
+  opacity: 1;
+}
+
+form:focus-within input::placeholder {
+  opacity: 0;
+}
+
+.links-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width:75%;
+	margin: 1em 0em;
+	
+}
+.link-inner-container {
+	overflow: auto;
+	scrollbar-width: none;
+	height: 100%;
+	vertical-align: top;
+	align-items: center;
+}
+.link-set{
+  padding: 1em;
+  border-width:2px;
+	border-style:solid;
+	border-color:white;
+	background-color: #959595;
+  font-family: "";
+  font-size: 1em;
+  width: 20em;
+  height: 20em;
+  margin: 0em .5em;
+}
+
+.link {
+	text-decoration: none;
+	display:block;
+	margin: .5em 0em;
+}
+.link:visited{
+	color: #0000EE;
+}
+.link:hover {
+	color: #fff;
+}
