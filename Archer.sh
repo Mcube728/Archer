@@ -31,7 +31,7 @@ echo "INSTALLING WINDOW MANAGER i3..."
 echo
 yes | sudo pacman -S i3 --noconfirm
 yes | sudo pacman -S dmenu --noconfirm
-yes | sudo pacman -S engrampar --noconfirm
+yes | sudo pacman -S engrampa --noconfirm
 yes | sudo pacman -S qdfview   --noconfirm
 yes | sudo pacman -S firefox  --noconfirm
 yes | sudo pacman -S lynx  --noconfirm
