@@ -21,12 +21,18 @@ cp -f i3_config ~/.config/i3/config
 echo "CONFIGURED i3 WM! :)"
 echo
 
+echo 
+echo "CONFIGGURING VIM..."
+echo
+cp -f vimrc ~/.vimrc
+echo "CONFIGURED VIM :)"
+
 echo
 echo "CONFIGURING URXVT TERMINAL EMULATOR"
 echo
 cp Xresources /home/mikhail/.Xresources
 xrdb ~/.Xresources
 echo "CONFIGURED URXVT TERMINAL EMULATOR! :)"
-
-echo "DONE CONFIGURING SYSTEM!"
+mkdir ~/.config/startpage
+echo
 echo "THANK YOU FOR USING ARCHER!! :)"

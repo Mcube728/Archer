@@ -49,6 +49,7 @@ yes | sudo pacman -S feh --noconfirm
 yes | sudo pacman -S bashtop --noconfirm
 yes | sudo pacman -S lxappearance --noconfirm
 yes | sudo pacman -S gnome-themes-extra --noconfirm
+yes | sudo pacman -S urxvt-perls
 echo
 echo "DONE INSTALLING WINDOW MANAGER i3! :)"
 echo
