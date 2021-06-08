@@ -4,4 +4,4 @@ This is a script to install a few basic programs in Arch Linux. I have used a wi
 WM -> i3<br>
 Terminal -> rxvt-unicode<br>
 web browser -> Firefox, Lynx<br>
-Text editor -> vim, mousepad<br>
+Text editor -> vim<br>
