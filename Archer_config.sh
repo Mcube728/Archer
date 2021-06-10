@@ -16,23 +16,23 @@ echo "_____________________________________"
 
 echo 
 echo "CONFIGURING i3 WINDOW MANAGER..."
-echo
 cp -f i3_config ~/.config/i3/config
 echo "CONFIGURED i3 WM! :)"
 echo
 
 echo 
 echo "CONFIGGURING VIM..."
-echo
 cp -f vimrc ~/.vimrc
 echo "CONFIGURED VIM :)"
 
+cp -f i3status ~/.i3status.conf
+
 echo
 echo "CONFIGURING URXVT TERMINAL EMULATOR"
-echo
 cp Xresources /home/mikhail/.Xresources
 xrdb ~/.Xresources
 echo "CONFIGURED URXVT TERMINAL EMULATOR! :)"
-mkdir ~/.config/startpage
+cp -r startpage ~/.config/
+echo
 echo
 echo "THANK YOU FOR USING ARCHER!! :)"

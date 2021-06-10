@@ -42,14 +42,17 @@ yes | sudo pacman -S htop  --noconfirm
 yes | sudo pacman -S neofetch --noconfirm
 yes | sudo pacman -S git  --noconfirm
 yes | sudo pacman -S wget  --noconfirm
-yes | sudo pacman -S xfce4-screenshooter  --noconfirm
+yes | sudo pacman -S scrot--noconfirm
 yes | sudo pacman -S libreoffice --noconfirm
 yes | sudo pacman -S foliate --noconfirm
 yes | sudo pacman -S feh --noconfirm
 yes | sudo pacman -S bashtop --noconfirm
 yes | sudo pacman -S lxappearance --noconfirm
 yes | sudo pacman -S gnome-themes-extra --noconfirm
-yes | sudo pacman -S urxvt-perls
+yes | sudo pacman -S urxvt-perls --noconfirm
+yes | sudo pacman -S adobe-source-han-sans-otc-fonts --noconfirm
+yes | sudo pacman -S noto-fonts-emoji --noconfirm
+yes | sudo pacman -S --needed base-devel git
 echo
 echo "DONE INSTALLING WINDOW MANAGER i3! :)"
 echo
