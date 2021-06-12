@@ -27,10 +27,10 @@ echo
 
 # This section takes care of the DE/WM section. I wanted a WM only setup, but you can change the script to install a DE/WM of your choice. I chose i3. 
 echo
-echo "INSTALLING WINDOW MANAGER i3..."
+echo "INSTALLING DESKTOP ENVIRONMENT XFCE..."
 echo
-yes | sudo pacman -S i3 --noconfirm
-yes | sudo pacman -S dmenu --noconfirm
+yes | sudo pacman -S xfce4 --noconfirm
+yes | sudo pacman -S mousepad --noconfirm
 yes | sudo pacman -S engrampa --noconfirm
 yes | sudo pacman -S qdfview   --noconfirm
 yes | sudo pacman -S firefox  --noconfirm
@@ -54,7 +54,7 @@ yes | sudo pacman -S adobe-source-han-sans-otc-fonts --noconfirm
 yes | sudo pacman -S noto-fonts-emoji --noconfirm
 yes | sudo pacman -S --needed base-devel git
 echo
-echo "DONE INSTALLING WINDOW MANAGER i3! :)"
+echo "DONE INSTALLING DESKTOP ENVIRONMENT XFCE! :)"
 echo
 
 # This section now takes care of the Display Manager. I chose LightDM. Feel free to replace LightDM with your choice of Display Manager. 
@@ -92,7 +92,6 @@ yes | sudo pacman -S hplip --noconfirm          # HP drivers
 yes | sudo pacman -S system-config-printer      # Printer setup utility
 echo 
 echo "DONE INSTALLING PRINTER COMPONENTS! :)"
-
 echo "======================================================================"
 sudo systemctl enable lightdm
 echo
