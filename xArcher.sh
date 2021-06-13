@@ -30,22 +30,22 @@ echo
 echo "INSTALLING DESKTOP ENVIRONMENT XFCE..."
 echo
 yes | sudo pacman -S xfce4 --noconfirm
-yes | sudo pacman -S mousepad --noconfirm
+yes | sudo pacman -S xfce4-goodies --noconfirm
+yes | sudo pacman -S networkmanager --noconfirm
+yes | sudo pacman -S networkmanager-applet --noconfirm
 yes | sudo pacman -S engrampa --noconfirm
 yes | sudo pacman -S qdfview   --noconfirm
 yes | sudo pacman -S firefox  --noconfirm
 yes | sudo pacman -S lynx  --noconfirm
 yes | sudo pacman -S ffmpeg  --noconfirm
 yes | sudo pacman -S rxvt-unicode  --noconfirm
-yes | sudo pacman -S thunar  --noconfirm
 yes | sudo pacman -S htop  --noconfirm
 yes | sudo pacman -S neofetch --noconfirm
 yes | sudo pacman -S git  --noconfirm
 yes | sudo pacman -S wget  --noconfirm
 yes | sudo pacman -S scrot--noconfirm
 yes | sudo pacman -S libreoffice --noconfirm
-yes | sudo pacman -S foliate --noconfirm
-yes | sudo pacman -S feh --noconfirm
+yes | sudo pacman -S calibre --noconfirm
 yes | sudo pacman -S bashtop --noconfirm
 yes | sudo pacman -S lxappearance --noconfirm
 yes | sudo pacman -S gnome-themes-extra --noconfirm
@@ -53,6 +53,17 @@ yes | sudo pacman -S urxvt-perls --noconfirm
 yes | sudo pacman -S adobe-source-han-sans-otc-fonts --noconfirm
 yes | sudo pacman -S noto-fonts-emoji --noconfirm
 yes | sudo pacman -S --needed base-devel git
+yes | sudo pacman -S gcolor2 --noconfirm
+yes | sudo pacman -S gimp --noconfirm
+yes | sudo pacman -S mousepad --noconfirm
+yes | sudo pacman -S hexchat --noconfirm
+yes | sudo pacman -S irssi --noconfirm
+yes | sudo pacman -S zip --noconfirm
+yes | sudo pacman -S unzip --noconfirm
+yes | sudo pacman -S unrar --noconfirm
+yes | sudo pacman -S vlc --noconfirm
+yes | sudo pacman -S xf86-input-libinput --noconfirm
+
 echo
 echo "DONE INSTALLING DESKTOP ENVIRONMENT XFCE! :)"
 echo
