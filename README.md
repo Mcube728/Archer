@@ -1,5 +1,6 @@
 # Archer
 This is a script to install a few basic programs in Arch Linux. I have made scripts for both desktop environment(XFCE) and window manager(i3) only setups, but you can hack the script to use your preferred Desktop Environment/Window Manager. 
+These scripts have taken a lot of inspiration from Rick Ellis' <a href="https://github.com/rickellis/ArchMatic">Archmatic scripts</a>
 
 Terminal -> rxvt-unicode<br>
 web browser -> Firefox, Lynx<br>
