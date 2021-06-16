@@ -35,6 +35,7 @@ echo
 
 # The System-------------------------------------------------------- 
 yes | sudo pacman -S linux-lts --noconfirm                          # Long Term Support Linux Kernel(Secondary boot option)
+yes | sudo pacman -S ntp --noconfirm                                # Package to set the time via network
 yes | sudo pacman -S xf86-input-libinput --noconfirm                # Trackpoint Drivers (I'm making this script with my thinkpad in mind. For those of y'all that are curious, it's a T470 with an i5)
 
 

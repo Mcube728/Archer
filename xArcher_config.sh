@@ -45,7 +45,7 @@ echo
 echo
 echo "CONFIGURING URXVT TERMINAL EMULATOR"
 cp -f Xresources /home/mikhail/.Xresources
-xrdb ~/.Xresources
+xrdb /home/mikhail/.Xresources
 echo "URxvt.geometry: 95x50" > ~/.Xdefaults
 echo "CONFIGURED URXVT TERMINAL EMULATOR! :)"
 echo
