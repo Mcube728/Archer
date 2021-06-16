@@ -23,18 +23,8 @@ echo
 #------------------------------------------
 # I got this from Rick Ellis' ArcMatic Arch installation script. He installed an LTS(Long Term Support) Kernel and configured it as a second boot option. 
 echo
-echo "CONFIGURING LTS KERNEL AS A SECONDARY BOOT OPTION"
-sudo cp /boot/loader/entries/arch.conf /boot/loader/entries/arch-lts.conf
-sudo sed -i 's|Arch Linux|Arch Linux LTS Kernel|g' /boot/loader/entries/arch-lts.conf
-sudo sed -i 's|vmlinuz-linux|vmlinuz-linux-lts|g' /boot/loader/entries/arch-lts.conf
-sudo sed -i 's|initramfs-linux.img|initramfs-linux-lts.img|g' /boot/loader/entries/arch-lts.conf
-
-#------------------------------------------
-echo
-echo "CONFIGURING CUPS SERVICE DAEMON FOR PRINTING..."
-systemctl enable org.cups.cupsd.service
-systemctl start org.cups.cupsd.service
-echo
+echo "CONFIGURING LTS KERNEL AS A SECONDARY BOOT OPTION..."
+grub-mkconfig -o /boot/grub/grub.cfg
 
 #------------------------------------------
 echo

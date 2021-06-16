@@ -14,7 +14,7 @@ echo
 echo " Arch Linux Post Installation Script "
 echo "_____________________________________"
 
-yes | sudo pacman -Syyu     # Upgrade the system before the applications so as not to run into any errors 
+yes | sudo pacman -Syyu --noconfirm    # Upgrade the system before the applications so as not to run into any errors 
 
 #===================================================================
 # This section takes care of the xorg server which is responsible for handling the programs that handle Graphical User Interfaces(GUIs).
@@ -32,13 +32,13 @@ echo
 
 #===================================================================
 # This section takes care of the DE/WM section. In the original script, I wanted to go with a window manager only setup, however, I changed my mind, and decided to go with a desktop environment setup(this is the reason why the original script[Archer.sh] is lacking a bit. Once I get some more time on my hands, I'll update the i3 script as well). This script will install the XFCE DE. The original Archer script has i3 as the window manager. Of course, you can hack this script to use something like Gnome, KDE, LXDE and so on. I chose XFCE because it's simple and fast, plus it's easy on system resources too. 
-echo
-echo "INSTALLING DESKTOP ENVIRONMENT XFCE..."
-echo
+
 # The System-------------------------------------------------------- 
-sudo pacman -S linux-lts                                            # Long Term Support Linux Kernel(Secondary boot option)
+yes | sudo pacman -S linux-lts --noconfirm                          # Long Term Support Linux Kernel(Secondary boot option)
 yes | sudo pacman -S xf86-input-libinput --noconfirm                # Trackpoint Drivers (I'm making this script with my thinkpad in mind. For those of y'all that are curious, it's a T470 with an i5)
 
+
+echo "INSTALLING DESKTOP ENVIRONMENT XFCE..."
 # The Desktop Environment-------------------------------------------
 yes | sudo pacman -S xfce4 --noconfirm                              # XFCE Desktop Environment
 yes | sudo pacman -S xfce4-goodies --noconfirm                      # XFCE Desktop Environment extras
@@ -47,6 +47,7 @@ yes | sudo pacman -S networkmanager-applet --noconfirm              # System tra
 yes | sudo pacman -S engrampa --noconfirm                           # Archive Manager
 echo
 echo "DONE INSTALLING DESKTOP ENVIRONMENT XFCE! :)"
+echo
 
 
 #===================================================================
@@ -66,19 +67,18 @@ yes | sudo pacman -S zip --noconfirm                                # Zip Compre
 yes | sudo pacman -S neofetch --noconfirm                           # Shows system information in the Terminal(AKA an Arch Linux User's badge of honour XD)
 
 # Development-------------------------------------------------------
-yes | sudo pacman -S --needed base-devel git                        #                        
-yes | sudo pacman -S git                                            # Version Control System
-yes | sudo pacman -S gcc                                            # C/C++ Compiler
-yes | sudo pacman -S glibc                                          # C libraries
-yes | sudo pacman -S vim                                            # Text editor
+yes | sudo pacman -S --needed base-devel git --noconfirm            #                        
+yes | sudo pacman -S git --noconfirm                                # Version Control System
+yes | sudo pacman -S gcc --noconfirm                                # C/C++ Compiler
+yes | sudo pacman -S glibc --noconfirm                              # C libraries
+yes | sudo pacman -S vim --noconfirm                                # Text editor
 
 # Productivity------------------------------------------------------
 yes | sudo pacman -S libreoffice --noconfirm                        # LibreOffice Suite
 yes | sudo pacman -S mousepad --noconfirm                           # Graphical text editor
-yes | sudo pacman -S qdfview   --noconfirm                          # Tabbed PDF Viewer. Browsers make great pdf viewers too, so you can totally ditch this.
+yes | sudo pacman -S qpdfview   --noconfirm                          # Tabbed PDF Viewer. Browsers make great pdf viewers too, so you can totally ditch this.
 
 # Disk Utilities----------------------------------------------------
-yes | sudo pacman -S autofs --noconfirm                             # Auto-mounter
 yes | sudo pacman -S gparted --noconfirm                            # Disk Utility
 
 # Graphics and Design-----------------------------------------------
@@ -142,21 +142,9 @@ echo "DONE INSTALLING AUDIO COMPONENTS! :)"
 
 
 #===================================================================
-# This section takes care of the components required for printing
-echo 
-echo "INSTALLING PRINTER COMPONENTS..."
-echo 
-yes | sudo pacman -S cups --noconfirm           # Open source printer drivers
-yes | sudo pacman -S cups-pdf --noconfirm       # PDF support for cups
-yes | sudo pacman -S ghostscript --noconfirm    # PostScript interpreter
-yes | sudo pacman -S gsfonts --noconfirm        # Adobe Postscript replacement fonts
-yes | sudo pacman -S hplip --noconfirm          # HP drivers 
-yes | sudo pacman -S system-config-printer      # Printer setup utility
-echo 
-echo "DONE INSTALLING PRINTER COMPONENTS! :)"
+# You may have noticed that I have not put a section for printer packages and services. Unfortunately, I do not have a printer, so these packages won't be of use to me. If I do have to print something, I put it on a usb drive and head over to a store with a  printing service. If you do have a printer of your own, you're free to hack this script and install the needed packages and services. :)
 echo "======================================================================"
 sudo systemctl enable lightdm
 echo
 echo
 echo "DONE INSTALLING THE APPLICATIONS! YOU CAN NOW LAUNCH THE CONFIGURATION SCRIPT FOR THE SYSTEM. :)"
-
