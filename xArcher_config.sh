@@ -65,7 +65,7 @@ echo "NETWORK CONFIGURATION"
 echo "Find your network adapter:"
 ip link
 echo
-echo "Enter your network adapter:" LINK
+read -p "Enter your network adapter:" LINK
 echo 
 echo "DISABLING DHCP AND ENABLING NETWORK MANAGER DAEMON..."
 echo 

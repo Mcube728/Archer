@@ -21,8 +21,10 @@ yes | sudo pacman -Syyu     # Upgrade the system before the applications so as n
 echo
 echo "INSTALLING XORG..."
 echo
-yes | sudo pacman -S xorg-server --noconfirm
-yes | sudo pacman -S xorg-xinit --noconfirm
+yes | sudo pacman -S xorg-server --noconfirm        # XOrg Server
+yes | sudo pacman -S xorg-xinit --noconfirm         # XOrg init
+yes | sudo pacman _S xorg-apps --noconfirm          # XOrg apps group
+yes | sudo pacman -S xf86-video-intel --noconfirm   # Open Source video drivers for Intel
 echo 
 echo "DONE INSTALLING XORG! :)"
 echo
@@ -43,7 +45,13 @@ yes | sudo pacman -S xfce4-goodies --noconfirm                      # XFCE Deskt
 yes | sudo pacman -S networkmanager --noconfirm                     # Network Connection Manager 
 yes | sudo pacman -S networkmanager-applet --noconfirm              # System tray icon
 yes | sudo pacman -S engrampa --noconfirm                           # Archive Manager
+echo
+echo "DONE INSTALLING DESKTOP ENVIRONMENT XFCE! :)"
 
+
+#===================================================================
+# This section takes care of the additional software I use on a daily basis. You can add your own applications here...
+echo "INSTALLING SOFTWARE..."
 # Terminal Shizz----------------------------------------------------
 yes | sudo pacman -S rxvt-unicode  --noconfirm                      # Terminal Emulator
 yes | sudo pacman -S urxvt-perls --noconfirm                        # Perl Scripts for URXVT
@@ -92,13 +100,15 @@ yes | sudo pacman -S gnome-themes-extra --noconfirm                 # Extra them
 yes | sudo pacman -S adobe-source-han-sans-otc-fonts --noconfirm    # Fonts for Languages like Chinese, Japanese, Vietnamese, Mandarin and so on and so forth. 
 yes | sudo pacman -S noto-fonts-emoji --noconfirm                   # Emoji Fonts
 
-#Miscellaneous------------------------------------------------------
+# Miscellaneous-----------------------------------------------------
 yes | sudo pacman -S calibre --noconfirm                            # Ebook Management
 yes | sudo pacman -S vlc --noconfirm                                # Video Player
 yes | sudo pacman -S ffmpeg  --noconfirm                            # Video Converter (Mental Outlaw has a great video on youtube on how you can record your screen from the terminal via ffmpeg!)
 
+# Backups
+yes | sudo pacman -S rsync                                          # CLI filesync utility that can be used for backups
 echo
-echo "DONE INSTALLING DESKTOP ENVIRONMENT XFCE! :)"
+echo "DONE INSTALLING SOFTWARE! :)"
 echo
 
 
