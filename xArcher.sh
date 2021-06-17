@@ -44,7 +44,7 @@ echo "INSTALLING DESKTOP ENVIRONMENT XFCE..."
 yes | sudo pacman -S xfce4 --noconfirm                              # XFCE Desktop Environment
 yes | sudo pacman -S xfce4-goodies --noconfirm                      # XFCE Desktop Environment extras
 yes | sudo pacman -S networkmanager --noconfirm                     # Network Connection Manager 
-yes | sudo pacman -S networkmanager-applet --noconfirm              # System tray icon
+yes | sudo pacman -S network-manager-applet --noconfirm              # System tray icon
 yes | sudo pacman -S engrampa --noconfirm                           # Archive Manager
 echo
 echo "DONE INSTALLING DESKTOP ENVIRONMENT XFCE! :)"
