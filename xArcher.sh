@@ -42,11 +42,43 @@ yes | sudo pacman -S xf86-input-libinput --noconfirm                # Trackpoint
 echo "INSTALLING DESKTOP ENVIRONMENT XFCE..."
 # The Desktop Environment-------------------------------------------
 yes | sudo pacman -S xfce4 --noconfirm                              # XFCE Desktop Environment
-yes | sudo pacman -S xfce4-goodies --noconfirm                      # XFCE Desktop Environment extras
 yes | sudo pacman -S networkmanager --noconfirm                     # Network Connection Manager 
 yes | sudo pacman -S network-manager-applet --noconfirm             # System tray icon
 yes | sudo pacman -S nm-connection-editor --noconfirm               # GUI for Network Manager
 yes | sudo pacman -S engrampa --noconfirm                           # Archive Manager
+
+# xfce-goodies(but without ristretto, I don't like ristretto, and I prefer nomacs[personal preference])
+#(this is a very stupid way of doing things, so this will exist until I find a better solution, I'm still learning!)
+sudo pacman -S mousepad --noconfirm 
+sudo pacman -S thunar-archive-plugin --noconfirm 
+sudo pacman -S thunar-media-tags-plugin --noconfirm 
+sudo pacman -S xfburn --noconfirm 
+sudo pacman -S xfce4-battery-plugin --noconfirm 
+sudo pacman -S xfce4-clipman-plugin --noconfirm 
+sudo pacman -S xfce4-cpufreq-plugin --noconfirm 
+sudo pacman -S xfce4-cpugraph-plugin --noconfirm 
+sudo pacman -S xfce4-datetime-plugin --noconfirm 
+sudo pacman -S xfce4-dict --noconfirm 
+sudo pacman -S xfce4-diskperf-plugin --noconfirm 
+sudo pacman -S xfce4-fsguard-plugin --noconfirm 
+sudo pacman -S xfce4-genmon-plugin  --noconfirm 
+sudo pacman -S xfce4-mount-plugin --noconfirm 
+sudo pacman -S xfce4-mpc-plugin --noconfirm 
+sudo pacman -S xfce4-netload-plugin --noconfirm 
+sudo pacman -S xfce4-notes-plugin --noconfirm 
+sudo pacman -S xfce4-notifyd --noconfirm 
+sudo pacman -S xfce4-pulseaudio-plugin --noconfirm 
+sudo pacman -S xfce-screensaver --noconfirm 
+sudo pacman -S xfce4-screenshooter --noconfirm 
+sudo pacman -S xfce4-sensors-plugin --noconfirm 
+sudo pacman -S xfce4-smartbookmark-plugin --noconfirm 
+sudo pacman -S xfce4-systemload-plugin --noconfirm 
+sudo pacman -S xfce4-taskmanager --noconfirm 
+sudo pacman -S xfce4-time-out-plugin --noconfirm 
+sudo pacman -S xfce4-timer-plugin --noconfirm 
+sudo pacman -S xfce4-verve-plugin --noconfirm 
+sudo pacman -S xfce4-wavelan-plugin --noconfirm 
+sudo pacman -S xfce4-whiskermenu-plugin --noconfirm 
 echo
 echo "DONE INSTALLING DESKTOP ENVIRONMENT XFCE! :)"
 echo
@@ -84,7 +116,7 @@ yes | sudo pacman -S qpdfview   --noconfirm                          # Tabbed PD
 yes | sudo pacman -S gparted --noconfirm                            # Disk Utility
 
 # Graphics and Design-----------------------------------------------
-yes | sudo pacman -S gimp --noconfirm                               # Photo Editing
+yes | sudo pacman -S nomacs --noconfirm                             # Image Viewing 
 yes | sudo pacman -S gcolor2 --noconfirm                            # Color Picker
 yes | sudo pacman -S inkscape --noconfirm                           # Vector Image Creation
 
