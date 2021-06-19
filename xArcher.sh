@@ -138,6 +138,7 @@ yes | sudo pacman -S noto-fonts-emoji --noconfirm                   # Emoji Font
 yes | sudo pacman -S calibre --noconfirm                            # Ebook Management
 yes | sudo pacman -S vlc --noconfirm                                # Video Player
 yes | sudo pacman -S ffmpeg  --noconfirm                            # Video Converter (Mental Outlaw has a great video on youtube on how you can record your screen from the terminal via ffmpeg!)
+yes | sudo pacman -S mpd --noconfirm                                # Music Player Daemon
 
 # Backups
 yes | sudo pacman -S rsync                                          # CLI filesync utility that can be used for backups
