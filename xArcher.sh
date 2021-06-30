@@ -47,36 +47,23 @@ yes | sudo pacman -S network-manager-applet --noconfirm             # System tra
 yes | sudo pacman -S nm-connection-editor --noconfirm               # GUI for Network Manager
 yes | sudo pacman -S engrampa --noconfirm                           # Archive Manager
 
-# xfce-goodies(but without ristretto, I don't like ristretto, and I prefer nomacs[personal preference])
-#(this is a very stupid way of doing things, so this will exist until I find a better solution, I'm still learning!)
+# I don't usually use all of the XFCE goodies, so I just install what I use.  
 sudo pacman -S mousepad --noconfirm 
 sudo pacman -S thunar-archive-plugin --noconfirm 
 sudo pacman -S thunar-media-tags-plugin --noconfirm 
 sudo pacman -S xfburn --noconfirm 
 sudo pacman -S xfce4-battery-plugin --noconfirm 
 sudo pacman -S xfce4-clipman-plugin --noconfirm 
-sudo pacman -S xfce4-cpufreq-plugin --noconfirm 
 sudo pacman -S xfce4-cpugraph-plugin --noconfirm 
 sudo pacman -S xfce4-datetime-plugin --noconfirm 
-sudo pacman -S xfce4-dict --noconfirm 
-sudo pacman -S xfce4-diskperf-plugin --noconfirm 
-sudo pacman -S xfce4-fsguard-plugin --noconfirm 
-sudo pacman -S xfce4-genmon-plugin  --noconfirm 
 sudo pacman -S xfce4-mount-plugin --noconfirm 
 sudo pacman -S xfce4-mpc-plugin --noconfirm 
 sudo pacman -S xfce4-netload-plugin --noconfirm 
-sudo pacman -S xfce4-notes-plugin --noconfirm 
 sudo pacman -S xfce4-notifyd --noconfirm 
 sudo pacman -S xfce4-pulseaudio-plugin --noconfirm 
-sudo pacman -S xfce-screensaver --noconfirm 
 sudo pacman -S xfce4-screenshooter --noconfirm 
-sudo pacman -S xfce4-sensors-plugin --noconfirm 
-sudo pacman -S xfce4-smartbookmark-plugin --noconfirm 
 sudo pacman -S xfce4-systemload-plugin --noconfirm 
 sudo pacman -S xfce4-taskmanager --noconfirm 
-sudo pacman -S xfce4-time-out-plugin --noconfirm 
-sudo pacman -S xfce4-timer-plugin --noconfirm 
-sudo pacman -S xfce4-verve-plugin --noconfirm 
 sudo pacman -S xfce4-wavelan-plugin --noconfirm 
 sudo pacman -S xfce4-whiskermenu-plugin --noconfirm 
 echo
@@ -132,13 +119,14 @@ yes | sudo pacman -S firefox  --noconfirm                           # Web Browse
 # Fonts and Themes--------------------------------------------------
 yes | sudo pacman -S gnome-themes-extra --noconfirm                 # Extra themes. Contains the Adwaita-dark Theme. 
 yes | sudo pacman -S adobe-source-han-sans-otc-fonts --noconfirm    # Fonts for Languages like Chinese, Japanese, Vietnamese, Mandarin and so on and so forth. 
+yes | sudo pacman -S terminus-font --noconfirm                      # Terminus Font(I absolutely love this font)
 yes | sudo pacman -S noto-fonts-emoji --noconfirm                   # Emoji Fonts
 
 # Miscellaneous-----------------------------------------------------
 yes | sudo pacman -S calibre --noconfirm                            # Ebook Management
 yes | sudo pacman -S vlc --noconfirm                                # Video Player
+yes | sudo pacman -S nomacs --noconfirm                             # Image Viewer
 yes | sudo pacman -S ffmpeg  --noconfirm                            # Video Converter (Mental Outlaw has a great video on youtube on how you can record your screen from the terminal via ffmpeg!)
-yes | sudo pacman -S mpd --noconfirm                                # Music Player Daemon
 
 # Backups
 yes | sudo pacman -S rsync                                          # CLI filesync utility that can be used for backups
