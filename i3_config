@@ -31,9 +31,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Gaps
+gaps outer 2
+gaps inner 2
 for_window [class=".*"] border pixel 0
-gap size outer 2
-gap size inner 2
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
