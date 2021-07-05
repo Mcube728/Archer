@@ -75,8 +75,6 @@ echo
 # This section takes care of the additional software I use on a daily basis. You can add your own applications here...
 echo "INSTALLING SOFTWARE..."
 # Terminal Shizz----------------------------------------------------
-yes | sudo pacman -S rxvt-unicode  --noconfirm                      # Terminal Emulator
-yes | sudo pacman -S urxvt-perls --noconfirm                        # Perl Scripts for URXVT
 yes | sudo pacman -S wget  --noconfirm                              # The non-interactive network Downloader
 yes | sudo pacman -S curl --noconfirm                               # Remote content retrieval
 yes | sudo pacman -S scrot--noconfirm                               # Command Line based Screenshot utility
@@ -121,6 +119,7 @@ yes | sudo pacman -S gnome-themes-extra --noconfirm                 # Extra them
 yes | sudo pacman -S adobe-source-han-sans-otc-fonts --noconfirm    # Fonts for Languages like Chinese, Japanese, Vietnamese, Mandarin and so on and so forth. 
 yes | sudo pacman -S terminus-font --noconfirm                      # Terminus Font(I absolutely love this font)
 yes | sudo pacman -S noto-fonts-emoji --noconfirm                   # Emoji Fonts
+yes | sudo pacman -S terminus-font --noconfirm                      # Terminus font(I absolutely love this font!!)
 
 # Miscellaneous-----------------------------------------------------
 yes | sudo pacman -S calibre --noconfirm                            # Ebook Management

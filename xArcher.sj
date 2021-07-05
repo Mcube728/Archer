@@ -31,7 +31,7 @@ echo
 
 
 #===================================================================
-# This section takes care of the DE/WM section. There are 2 scripts, i3Archer and xArcher. i3Archer installs, well the i3 Window manager. xArcher installs the XFCE Desktop environment. 
+# This section takes care of the DE/WM section. In the original script, I wanted to go with a window manager only setup, however, I changed my mind, and decided to go with a desktop environment setup(this is the reason why the original script[Archer.sh] is lacking a bit. Once I get some more time on my hands, I'll update the i3 script as well). This script will install the XFCE DE. The original Archer script has i3 as the window manager. Of course, you can hack this script to use something like Gnome, KDE, LXDE and so on. I chose XFCE because it's simple and fast, plus it's easy on system resources too. 
 
 # The System-------------------------------------------------------- 
 yes | sudo pacman -S linux-lts --noconfirm                          # Long Term Support Linux Kernel(Secondary boot option)
@@ -41,12 +41,44 @@ yes | sudo pacman -S xf86-input-libinput --noconfirm                # Trackpoint
 
 echo "INSTALLING DESKTOP ENVIRONMENT XFCE..."
 # The Desktop Environment-------------------------------------------
-yes | sudo pacman -S i3-gaps --noconfirm                            # i3 Window manager with gaps
+yes | sudo pacman -S xfce4 --noconfirm                              # XFCE Desktop Environment
 yes | sudo pacman -S networkmanager --noconfirm                     # Network Connection Manager 
 yes | sudo pacman -S network-manager-applet --noconfirm             # System tray icon
 yes | sudo pacman -S nm-connection-editor --noconfirm               # GUI for Network Manager
 yes | sudo pacman -S engrampa --noconfirm                           # Archive Manager
 
+# xfce-goodies(but without ristretto, I don't like ristretto, and I prefer nomacs[personal preference])
+#(this is a very stupid way of doing things, so this will exist until I find a better solution, I'm still learning!)
+sudo pacman -S mousepad --noconfirm 
+sudo pacman -S thunar-archive-plugin --noconfirm 
+sudo pacman -S thunar-media-tags-plugin --noconfirm 
+sudo pacman -S xfburn --noconfirm 
+sudo pacman -S xfce4-battery-plugin --noconfirm 
+sudo pacman -S xfce4-clipman-plugin --noconfirm 
+sudo pacman -S xfce4-cpufreq-plugin --noconfirm 
+sudo pacman -S xfce4-cpugraph-plugin --noconfirm 
+sudo pacman -S xfce4-datetime-plugin --noconfirm 
+sudo pacman -S xfce4-dict --noconfirm 
+sudo pacman -S xfce4-diskperf-plugin --noconfirm 
+sudo pacman -S xfce4-fsguard-plugin --noconfirm 
+sudo pacman -S xfce4-genmon-plugin  --noconfirm 
+sudo pacman -S xfce4-mount-plugin --noconfirm 
+sudo pacman -S xfce4-mpc-plugin --noconfirm 
+sudo pacman -S xfce4-netload-plugin --noconfirm 
+sudo pacman -S xfce4-notes-plugin --noconfirm 
+sudo pacman -S xfce4-notifyd --noconfirm 
+sudo pacman -S xfce4-pulseaudio-plugin --noconfirm 
+sudo pacman -S xfce-screensaver --noconfirm 
+sudo pacman -S xfce4-screenshooter --noconfirm 
+sudo pacman -S xfce4-sensors-plugin --noconfirm 
+sudo pacman -S xfce4-smartbookmark-plugin --noconfirm 
+sudo pacman -S xfce4-systemload-plugin --noconfirm 
+sudo pacman -S xfce4-taskmanager --noconfirm 
+sudo pacman -S xfce4-time-out-plugin --noconfirm 
+sudo pacman -S xfce4-timer-plugin --noconfirm 
+sudo pacman -S xfce4-verve-plugin --noconfirm 
+sudo pacman -S xfce4-wavelan-plugin --noconfirm 
+sudo pacman -S xfce4-whiskermenu-plugin --noconfirm 
 echo
 echo "DONE INSTALLING DESKTOP ENVIRONMENT XFCE! :)"
 echo
@@ -77,17 +109,21 @@ yes | sudo pacman -S vim --noconfirm                                # Text edito
 
 # Productivity------------------------------------------------------
 yes | sudo pacman -S libreoffice --noconfirm                        # LibreOffice Suite
+yes | sudo pacman -S mousepad --noconfirm                           # Graphical text editor
 yes | sudo pacman -S qpdfview   --noconfirm                          # Tabbed PDF Viewer. Browsers make great pdf viewers too, so you can totally ditch this.
 
 # Disk Utilities----------------------------------------------------
 yes | sudo pacman -S gparted --noconfirm                            # Disk Utility
 
 # Graphics and Design-----------------------------------------------
+yes | sudo pacman -S gimp --noconfirm                               # Photo Editing
 yes | sudo pacman -S gcolor2 --noconfirm                            # Color Picker
+yes | sudo pacman -S inkscape --noconfirm                           # Vector Image Creation
 
 # Communications----------------------------------------------------
 yes | sudo pacman -S irssi --noconfirm                              # Terminal Based IRC Client
 yes | sudo pacman -S hexchat --noconfirm                            # Multi Format Chat Client
+yes | sudo pacman -S discord --noconfirm                            # Voice And text Chat
 
 # Internet/Web Tools------------------------------------------------
 yes | sudo pacman -S lynx  --noconfirm                              # Terminal Based Web Browser
@@ -97,10 +133,9 @@ yes | sudo pacman -S firefox  --noconfirm                           # Web Browse
 yes | sudo pacman -S gnome-themes-extra --noconfirm                 # Extra themes. Contains the Adwaita-dark Theme. 
 yes | sudo pacman -S adobe-source-han-sans-otc-fonts --noconfirm    # Fonts for Languages like Chinese, Japanese, Vietnamese, Mandarin and so on and so forth. 
 yes | sudo pacman -S noto-fonts-emoji --noconfirm                   # Emoji Fonts
-yes | sudo pacman -S terminus-font --noconfirm                      # Terminus Font(I absolutely love this font!!)
 
 # Miscellaneous-----------------------------------------------------
-yes | sudo pacman -S foliate --noconfirm                            # Ebook Reader
+yes | sudo pacman -S calibre --noconfirm                            # Ebook Management
 yes | sudo pacman -S vlc --noconfirm                                # Video Player
 yes | sudo pacman -S ffmpeg  --noconfirm                            # Video Converter (Mental Outlaw has a great video on youtube on how you can record your screen from the terminal via ffmpeg!)
 
@@ -147,4 +182,3 @@ sudo systemctl enable lightdm
 echo
 echo
 echo "DONE INSTALLING THE APPLICATIONS! YOU CAN NOW LAUNCH THE CONFIGURATION SCRIPT FOR THE SYSTEM. :)"
-q
