@@ -42,6 +42,8 @@ yes | sudo pacman -S xf86-input-libinput --noconfirm                # Trackpoint
 echo "INSTALLING DESKTOP ENVIRONMENT XFCE..."
 # The Desktop Environment-------------------------------------------
 yes | sudo pacman -S i3-gaps --noconfirm                            # i3 Window manager with gaps
+yes | sudo pacman -S i3-status --noconfirm                          # i3 Status bar
+yes | sudo pacman -S thunar --noconfirm                             # File Manager
 yes | sudo pacman -S networkmanager --noconfirm                     # Network Connection Manager 
 yes | sudo pacman -S network-manager-applet --noconfirm             # System tray icon
 yes | sudo pacman -S nm-connection-editor --noconfirm               # GUI for Network Manager
