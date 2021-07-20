@@ -79,8 +79,8 @@ yes | sudo pacman -S vim --noconfirm                                # Text edito
 
 # Productivity------------------------------------------------------
 yes | sudo pacman -S libreoffice --noconfirm                        # LibreOffice Suite
-yes | sudo pacman -S qpdfview   --noconfirm                          # Tabbed PDF Viewer. Browsers make great pdf viewers too, so you can totally ditch this.
-
+yes | sudo pacman -S qpdfview   --noconfirm                         # Tabbed PDF Viewer. Browsers make great pdf viewers too, so you can totally ditch this.
+yes | sudo pacman -S xorg-xcalc --noconfirm                         # Scientific calculator for X
 # Disk Utilities----------------------------------------------------
 yes | sudo pacman -S gparted --noconfirm                            # Disk Utility
 
@@ -105,6 +105,8 @@ yes | sudo pacman -S terminus-font --noconfirm                      # Terminus F
 yes | sudo pacman -S foliate --noconfirm                            # Ebook Reader
 yes | sudo pacman -S vlc --noconfirm                                # Video Player
 yes | sudo pacman -S ffmpeg  --noconfirm                            # Video Converter (Mental Outlaw has a great video on youtube on how you can record your screen from the terminal via ffmpeg!)
+yes | sudo pacman -S gnuchess --noconfirm                           # Chess engine
+yes | sudo pacman -S xboard --noconfirm                             # Chess engine front end
 
 # Backups
 yes | sudo pacman -S rsync                                          # CLI filesync utility that can be used for backups
@@ -149,4 +151,3 @@ sudo systemctl enable lightdm
 echo
 echo
 echo "DONE INSTALLING THE APPLICATIONS! YOU CAN NOW LAUNCH THE CONFIGURATION SCRIPT FOR THE SYSTEM. :)"
-q
