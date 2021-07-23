@@ -34,7 +34,6 @@ echo
 # This section takes care of the DE/WM section. In the original script, I wanted to go with a window manager only setup, however, I changed my mind, and decided to go with a desktop environment setup(this is the reason why the original script[Archer.sh] is lacking a bit. Once I get some more time on my hands, I'll update the i3 script as well). This script will install the XFCE DE. The original Archer script has i3 as the window manager. Of course, you can hack this script to use something like Gnome, KDE, LXDE and so on. I chose XFCE because it's simple and fast, plus it's easy on system resources too. 
 
 # The System-------------------------------------------------------- 
-yes | sudo pacman -S linux-lts --noconfirm                          # Long Term Support Linux Kernel(Secondary boot option)
 yes | sudo pacman -S ntp --noconfirm                                # Package to set the time via network
 yes | sudo pacman -S xf86-input-libinput --noconfirm                # Trackpoint Drivers (I'm making this script with my thinkpad in mind. For those of y'all that are curious, it's a T470 with an i5)
 
