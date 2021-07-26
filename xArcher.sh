@@ -132,6 +132,17 @@ echo
 echo "DONE INSTALLING SOFTWARE! :)"
 echo
 
+#===================================================================
+# This section now takes care of the Display Manager. I chose LightDM. Feel free to replace LightDM with your choice of Display Manager. 
+echo
+echo "INSTALLING DISPLAY MANAGER-LIGHTDM..."
+echo
+yes | sudo pacman -S lightdm  --noconfirm                           # Display/Login Manager
+yes | sudo pacman -S lightdm-gtk-greeter  --noconfirm               # Gtk Greeter
+yes | sudo pacman -S lightdm-gtk-greeter-settings  --noconfirm      # Settings for Lightdm
+echo
+echo "DONE INSTALLING DISPLAY MANAGER-LIGHTDM! :)"
+echo
 
 #===================================================================
 # This section takes care of the audio components now. 
