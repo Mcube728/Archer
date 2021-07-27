@@ -63,7 +63,9 @@ sudo pacman -S xfce4-pulseaudio-plugin --noconfirm
 sudo pacman -S xfce4-screenshooter --noconfirm 
 sudo pacman -S xfce4-systemload-plugin --noconfirm 
 sudo pacman -S xfce4-taskmanager --noconfirm 
-sudo pacman -S xfce4-wavelan-plugin --noconfirm 
+sudo pacman -S xfce4-wavelan-plugin --noconfirm
+sudo pacman -S thunar-volman                                        # Thunar Volume management
+sudo pacman -S gvfs                                                 # GNOME Virtual Filesystem(you need this for thunar to automoumt!!!)
 sudo pacman -S xfce4-whiskermenu-plugin --noconfirm 
 echo
 echo "DONE INSTALLING DESKTOP ENVIRONMENT XFCE! :)"
@@ -125,6 +127,7 @@ yes | sudo pacman -S calibre --noconfirm                            # Ebook Mana
 yes | sudo pacman -S vlc --noconfirm                                # Video Player
 yes | sudo pacman -S nomacs --noconfirm                             # Image Viewer
 yes | sudo pacman -S ffmpeg  --noconfirm                            # Video Converter (Mental Outlaw has a great video on youtube on how you can record your screen from the terminal via ffmpeg!)
+yes | sudo pacman -S kvantum-qt5 --noconfirm                        # SVG-based theme engine for Qt5 (including config tool and extra themes)
 
 # Backups
 yes | sudo pacman -S rsync                                          # CLI filesync utility that can be used for backups
