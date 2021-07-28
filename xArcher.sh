@@ -163,6 +163,12 @@ yes | sudo pacman -S volumeicon  --noconfirm        # System tray volume control
 echo
 echo "DONE INSTALLING AUDIO COMPONENTS! :)"
 
+echo
+echo "ENABLING NETWORK TIME PROTOCOL SO THE CLOCK WILL BE SET VIA NETWORK..."
+sudo ntpd -qg
+sudo systemctl enable ntpd.service
+sudo systemctl start ntpd.service
+echo
 
 #===================================================================
 # You may have noticed that I have not put a section for printer packages and services. Unfortunately, I do not have a printer, so these packages won't be of use to me. If I do have to print something, I put it on a usb drive and head over to a store with a  printing service. If you do have a printer of your own, you're free to hack this script and install the needed packages and services. :)
