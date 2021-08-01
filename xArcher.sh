@@ -80,10 +80,11 @@ yes | sudo pacman -S wget  --noconfirm                              # The non-in
 yes | sudo pacman -S curl --noconfirm                               # Remote content retrieval
 yes | sudo pacman -S scrot--noconfirm                               # Command Line based Screenshot utility
 yes | sudo pacman -S htop  --noconfirm                              # System Resource Monitor
-yes | sudo pacman -S bpytop --noconfirm                            # Another Resource Monitor. Looks better than htop in my opinion..
+yes | sudo pacman -S bpytop --noconfirm                             # Another Resource Monitor. Looks better than htop in my opinion..
 yes | sudo pacman -S unrar --noconfirm                              # RAR Compression program
 yes | sudo pacman -S unzip --noconfirm                              # Zip Compression Program
 yes | sudo pacman -S zip --noconfirm                                # Zip Compression Program
+yes | sudo pacman -S youtube-dl                                     # CLI utility for downloading youtube videos
 yes | sudo pacman -S neofetch --noconfirm                           # Shows system information in the Terminal(AKA an Arch Linux User's badge of honour XD)
 
 # Development-------------------------------------------------------
@@ -94,9 +95,9 @@ yes | sudo pacman -S glibc --noconfirm                              # C librarie
 yes | sudo pacman -S vim --noconfirm                                # Text editor
 
 # Productivity------------------------------------------------------
-yes | sudo pacman -S libreoffice-fresh --noconfirm                        # LibreOffice Suite
+yes | sudo pacman -S libreoffice-fresh --noconfirm                  # LibreOffice Suite
 yes | sudo pacman -S mousepad --noconfirm                           # Graphical text editor
-yes | sudo pacman -S qpdfview   --noconfirm                          # Tabbed PDF Viewer. Browsers make great pdf viewers too, so you can totally ditch this.
+yes | sudo pacman -S xpdf --noconfirm                               # PDF Viewer. Browsers make great pdf viewers too, so you can totally ditch this.
 
 # Disk Utilities----------------------------------------------------
 yes | sudo pacman -S gparted --noconfirm                            # Disk Utility
@@ -120,7 +121,6 @@ yes | sudo pacman -S gnome-themes-extra --noconfirm                 # Extra them
 yes | sudo pacman -S adobe-source-han-sans-otc-fonts --noconfirm    # Fonts for Languages like Chinese, Japanese, Vietnamese, Mandarin and so on and so forth. 
 yes | sudo pacman -S terminus-font --noconfirm                      # Terminus Font(I absolutely love this font)
 yes | sudo pacman -S noto-fonts-emoji --noconfirm                   # Emoji Fonts
-yes | sudo pacman -S terminus-font --noconfirm                      # Terminus font(I absolutely love this font!!)
 yes | sudo pacman -S kvantum-qt5 --noconfirm                        # SVG-based theme engine for Qt5 (including config tool and extra themes)
 
 # Miscellaneous-----------------------------------------------------
