@@ -171,6 +171,11 @@ sudo systemctl enable ntpd.service
 sudo systemctl start ntpd.service
 echo
 
+echo 
+echo "SETTING LAPTOP LID CLOSE TO SUSPEND..."
+sudo sed -i -e 's|[# ]*HandleLidSwitch[ ]*=[ ]*.*|HandleLidSwitch=suspend|g' /etc/systemd/logind.conf
+echo
+
 #===================================================================
 # You may have noticed that I have not put a section for printer packages and services. Unfortunately, I do not have a printer, so these packages won't be of use to me. If I do have to print something, I put it on a usb drive and head over to a store with a  printing service. If you do have a printer of your own, you're free to hack this script and install the needed packages and services. :)
 echo "======================================================================"
