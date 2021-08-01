@@ -48,6 +48,7 @@ yes | sudo pacman -S engrampa --noconfirm                           # Archive Ma
 
 # I don't usually use all of the XFCE goodies, so I just install what I use.  
 sudo pacman -S mousepad --noconfirm 
+sudo pacman -S xfce4-whiskermenu-plugin --noconfirm
 sudo pacman -S thunar-archive-plugin --noconfirm 
 sudo pacman -S thunar-media-tags-plugin --noconfirm 
 sudo pacman -S xfburn --noconfirm 
