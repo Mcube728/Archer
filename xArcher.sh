@@ -64,8 +64,8 @@ sudo pacman -S xfce4-screenshooter --noconfirm
 sudo pacman -S xfce4-systemload-plugin --noconfirm 
 sudo pacman -S xfce4-taskmanager --noconfirm 
 sudo pacman -S xfce4-wavelan-plugin --noconfirm
-sudo pacman -S thunar-volman                                        # Thunar Volume management
-sudo pacman -S gvfs                                                 # GNOME Virtual Filesystem(you need this for thunar to automoumt!!!)
+yes | sudo pacman -S thunar-volman --noconfirm                      # Thunar Volume management
+yes | sudo pacman -S gvfs --noconfirm                               # GNOME Virtual Filesystem(you need this for thunar to automoumt!!!)
 sudo pacman -S xfce4-whiskermenu-plugin --noconfirm 
 echo
 echo "DONE INSTALLING DESKTOP ENVIRONMENT XFCE! :)"
