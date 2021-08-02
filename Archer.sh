@@ -167,6 +167,11 @@ yes | sudo pacman -S volumeicon  --noconfirm        # System tray volume control
 echo
 echo "DONE INSTALLING AUDIO COMPONENTS! :)"
 
+echo "GENERATING USER DIRECTORIES..."
+yes | sudo pacman -S xdg-user-dirs --noconfirm
+xdg-user-dirs-update
+echo
+
 echo
 echo "ENABLING NETWORK TIME PROTOCOL SO THE CLOCK WILL BE SET VIA NETWORK..."
 sudo ntpd -qg
