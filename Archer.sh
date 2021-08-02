@@ -144,6 +144,7 @@ echo
 yes | sudo pacman -S lightdm  --noconfirm                           # Display/Login Manager
 yes | sudo pacman -S lightdm-gtk-greeter  --noconfirm               # Gtk Greeter
 yes | sudo pacman -S lightdm-gtk-greeter-settings  --noconfirm      # Settings for Lightdm
+yes | sudo pacman -S light-locker --noconfirm                       # Lightdm Locker 
 sudo systemctl enable lightdm 
 echo
 echo "DONE INSTALLING DISPLAY MANAGER-LIGHTDM! :)"
@@ -170,6 +171,9 @@ sudo ntpd -qg
 sudo systemctl enable ntpd.service
 sudo systemctl start ntpd.service
 echo
+
+echo "CONFIGURING VIM..."
+sudo wget -O ~/.vimrc https://raw.githubusercontent.com/Mcube728/Archer/main/vimrc
 
 echo 
 echo "SETTING LAPTOP LID CLOSE TO SUSPEND..."
