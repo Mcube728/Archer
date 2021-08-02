@@ -128,6 +128,8 @@ yes | sudo pacman -S kvantum-qt5 --noconfirm                        # SVG-based 
 yes | sudo pacman -S calibre --noconfirm                            # Ebook Management
 yes | sudo pacman -S vlc --noconfirm                                # Video Player
 yes | sudo pacman -S nomacs --noconfirm                             # Image Viewer
+yes | sudo pacman -S mpd --noconfirm                                # Music player daemon
+yes | sudo pacman -S ncmpcpp --noconfirm                            # Music player Client for mdp
 yes | sudo pacman -S ffmpeg  --noconfirm                            # Video Converter (Mental Outlaw has a great video on youtube on how you can record your screen from the terminal via ffmpeg!)
 
 # Backups
@@ -174,6 +176,16 @@ echo
 
 echo "CONFIGURING VIM..."
 sudo wget -O ~/.vimrc https://raw.githubusercontent.com/Mcube728/Archer/main/vimrc
+echo 
+
+echo
+echo "CONFIGURING MPD AND NCMPCPP..."
+systemctl enable --user start mpd
+mkdir ~/.config/mpd
+mkdir ~/.condif/ncmpcpp
+wget -O ~/.config/mpd/mpd.conf https://raw.githubusercontent.com/Mcube728/Archer/main/mpd.conf
+wget -O ~/.config/ncmpcpp/config https://raw.githubusercontent.com/Mcube728/Archer/main/ncmpcpp_config
+echo
 
 echo 
 echo "SETTING LAPTOP LID CLOSE TO SUSPEND..."
@@ -185,4 +197,4 @@ echo
 echo "======================================================================"
 echo
 echo
-echo "DONE INSTALLING THE APPLICATIONS! YOU CAN NOW LAUNCH THE CONFIGURATION SCRIPT FOR THE SYSTEM. :)"
+echo "DONE INSTALLING THE APPLICATIONS! YOU CAN NOW REBOOT. :)"
