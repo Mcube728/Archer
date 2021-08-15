@@ -193,6 +193,11 @@ wget -O ~/.config/ncmpcpp/config https://raw.githubusercontent.com/Mcube728/Arch
 echo
 
 echo 
+echo "CONFIGURING BASH PROMPT..."
+wget -O ~/.bashrc https://raw.githubusercontent.com/Mcube728/Archer/main/bashrc
+echo
+
+echo 
 echo "SETTING LAPTOP LID CLOSE TO SUSPEND..."
 sudo sed -i -e 's|[# ]*HandleLidSwitch[ ]*=[ ]*.*|HandleLidSwitch=suspend|g' /etc/systemd/logind.conf
 echo
