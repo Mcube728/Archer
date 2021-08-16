@@ -35,7 +35,7 @@ echo
 
 # The System-------------------------------------------------------- 
 yes | sudo pacman -S ntp --noconfirm                                # Package to set the time via network
-yes | sudo pacman -S xf86-input-libinput --noconfirm                # Trackpoint Drivers (I'm making this script with my thinkpad in mind. For those of y'all that are curious, it's a T470 with an i5)
+yes | sudo pacman -S xf86-input-libinput --noconfirm                # Trackpad Drivers
 
 
 echo "INSTALLING DESKTOP ENVIRONMENT XFCE..."
@@ -181,6 +181,7 @@ echo
 
 echo "CONFIGURING VIM..."
 sudo wget -O ~/.vimrc https://raw.githubusercontent.com/Mcube728/Archer/main/vimrc
+sudo wget -O ~/.gvimrc https://raw.githubusercontent.com/Mcube728/Archer/main/gvimrc
 echo 
 
 echo
