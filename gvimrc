@@ -26,4 +26,6 @@ set suffixes=.bak,~,.o,.info,.swp,.aux,.bbl,.blg,.brf,.cb,.dvi,.idx,.ilg,.ind,.i
 set tabstop=4
 set termencoding=utf-8
 set undodir=~/.cache/vim/undo//
+set lines=35
+set columns=120
 " vim: set ft=vim :
