@@ -5,12 +5,13 @@ set cpo&vim
 map! <S-Insert> <MiddleMouse>
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
-vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
+vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()<NL>nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))<NL>map <S-Insert> <MiddleMouse>
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))
 map <S-Insert> <MiddleMouse>
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
+set background=dark
 set backspace=indent,eol,start
 set backupdir=~/.cache/vim/backup//
 set directory=~/.cache/vim/swap//
@@ -18,6 +19,7 @@ set expandtab
 set fileencodings=ucs-bom,utf-8,default,latin1
 set guifont=Terminus\ 10
 colorscheme darkblue
+set guioptions=aegimLtT
 set helplang=en
 set mouse=a
 set ruler
