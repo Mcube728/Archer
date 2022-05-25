@@ -94,11 +94,12 @@ yes | sudo pacman -S git --noconfirm                                # Version Co
 yes | sudo pacman -S gcc --noconfirm                                # C/C++ Compiler
 yes | sudo pacman -S glibc --noconfirm                              # C libraries
 yes | sudo pacman -S vim --noconfirm                                # Text editor
+yes | sudo pacman -S python python-pip
 
 # Productivity------------------------------------------------------
 yes | sudo pacman -S libreoffice-fresh --noconfirm                  # LibreOffice Suite
 yes | sudo pacman -S mousepad --noconfirm                           # Graphical text editor
-yes | sudo pacman -S xpdf --noconfirm                               # PDF Viewer. Browsers make great pdf viewers too, so you can totally ditch this.
+yes | sudo pacman -S qpdfview --noconfirm                               # PDF Viewer. Browsers make great pdf viewers too, so you can totally ditch this.
 
 # Disk Utilities----------------------------------------------------
 yes | sudo pacman -S gparted --noconfirm                            # Disk Utility
@@ -115,7 +116,7 @@ yes | sudo pacman -S discord --noconfirm                            # Voice And 
 
 # Internet/Web Tools------------------------------------------------
 yes | sudo pacman -S lynx  --noconfirm                              # Terminal Based Web Browser
-yes | sudo pacman -S firefox  --noconfirm                           # Web Browser
+yes | sudo pacman -S chromium  --noconfirm                           # Web Browser
 
 # Fonts and Themes--------------------------------------------------
 yes | sudo pacman -S gnome-themes-extra --noconfirm                 # Extra themes. Contains the Adwaita-dark Theme. 
