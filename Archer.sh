@@ -95,6 +95,7 @@ yes | sudo pacman -S gcc --noconfirm                                # C/C++ Comp
 yes | sudo pacman -S glibc --noconfirm                              # C libraries
 yes | sudo pacman -S vim --noconfirm                                # Text editor
 yes | sudo pacman -S python python-pip
+yes | sudo pacman -S jupyter-notebook
 
 # Productivity------------------------------------------------------
 yes | sudo pacman -S libreoffice-fresh --noconfirm                  # LibreOffice Suite
