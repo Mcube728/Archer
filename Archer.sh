@@ -107,7 +107,7 @@ yes | sudo pacman -S gparted --noconfirm                            # Disk Utili
 
 # Graphics and Design-----------------------------------------------
 yes | sudo pacman -S nomacs --noconfirm                             # Image Viewing 
-yes | sudo pacman -S gcolor2 --noconfirm                            # Color Picker
+yes | sudo pacman -S gcolor3 --noconfirm                            # Color Picker
 yes | sudo pacman -S inkscape --noconfirm                           # Vector Image Creation
 
 # Communications----------------------------------------------------
@@ -117,7 +117,7 @@ yes | sudo pacman -S discord --noconfirm                            # Voice And 
 
 # Internet/Web Tools------------------------------------------------
 yes | sudo pacman -S lynx  --noconfirm                              # Terminal Based Web Browser
-yes | sudo pacman -S chromium  --noconfirm                           # Web Browser
+yes | sudo pacman -S firefox  --noconfirm                           # Web Browser
 
 # Fonts and Themes--------------------------------------------------
 yes | sudo pacman -S gnome-themes-extra --noconfirm                 # Extra themes. Contains the Adwaita-dark Theme. 
@@ -188,9 +188,10 @@ echo
 
 echo
 echo "CONFIGURING MPD AND NCMPCPP..."
-systemctl enable --user start mpd
+systemctl --user enable mpd
+systemctl --user start mpd
 mkdir ~/.config/mpd
-mkdir ~/.condif/ncmpcpp
+mkdir ~/.config/ncmpcpp
 wget -O ~/.config/mpd/mpd.conf https://raw.githubusercontent.com/Mcube728/Archer/main/mpd.conf
 wget -O ~/.config/ncmpcpp/config https://raw.githubusercontent.com/Mcube728/Archer/main/ncmpcpp_config
 echo
