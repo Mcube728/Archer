@@ -86,7 +86,7 @@ yes | sudo pacman -S bpytop --noconfirm                             # Another Re
 yes | sudo pacman -S unrar --noconfirm                              # RAR Compression program
 yes | sudo pacman -S unzip --noconfirm                              # Zip Compression Program
 yes | sudo pacman -S zip --noconfirm                                # Zip Compression Program
-yes | sudo pacman -S youtube-dl                                     # CLI utility for downloading youtube videos
+yes | sudo pacman -S yt-dlp                                         # CLI utility for downloading youtube videos
 yes | sudo pacman -S neofetch --noconfirm                           # Shows system information in the Terminal(AKA an Arch Linux User's badge of honour XD)
 yes | sudo pacman -S xclip --noconfirm                              # Terminal based clipboard
 
