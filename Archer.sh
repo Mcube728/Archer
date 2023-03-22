@@ -67,6 +67,7 @@ sudo pacman -S xfce4-taskmanager --noconfirm
 sudo pacman -S xfce4-wavelan-plugin --noconfirm
 yes | sudo pacman -S thunar-volman --noconfirm                      # Thunar Volume management
 yes | sudo pacman -S gvfs --noconfirm                               # GNOME Virtual Filesystem(you need this for thunar to automoumt!!!)
+yes | sudo pacman -S gvfs-smb --noconfirm                           # GVFS-SMB allows you to connect to servers from the file manager using the Server Message Block protocol
 sudo pacman -S xfce4-whiskermenu-plugin --noconfirm 
 echo
 echo "DONE INSTALLING DESKTOP ENVIRONMENT XFCE! :)"
@@ -126,10 +127,16 @@ yes | sudo pacman -S adobe-source-han-sans-otc-fonts --noconfirm    # Fonts for 
 yes | sudo pacman -S terminus-font --noconfirm                      # Terminus Font(I absolutely love this font)
 yes | sudo pacman -S noto-fonts-emoji --noconfirm                   # Emoji Fonts
 yes | sudo pacman -S kvantum-qt5 --noconfirm                        # SVG-based theme engine for Qt5 (including config tool and extra themes)
+yes | sudo pacman -S papirus-icon-theme                             # Papirus icon theme
+wget -qO- https://git.io/papirus-folders-install | sh               # change folder colours of papirus
+papirus-folders -l --them Papirus-Dark
+git clone git@github.com:mantissa-/mantis-theme.git ~/.themes       # Mantis theme for XFCE
+
 
 # Miscellaneous-----------------------------------------------------
-yes | sudo pacman -S calibre --noconfirm                            # Ebook Management
+yes | sudo pacman -S foliate --noconfirm                            # Ebook Reader
 yes | sudo pacman -S vlc --noconfirm                                # Video Player
+yes | sudo pacman -S mpv --noconfirm                                # Video Player
 yes | sudo pacman -S nomacs --noconfirm                             # Image Viewer
 yes | sudo pacman -S mpd --noconfirm                                # Music player daemon
 yes | sudo pacman -S ncmpcpp --noconfirm                            # Music player Client for mdp
@@ -183,8 +190,8 @@ sudo systemctl start ntpd.service
 echo
 
 echo "CONFIGURING VIM..."
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 sudo wget -O ~/.vimrc https://raw.githubusercontent.com/Mcube728/Archer/main/vimrc
-sudo wget -O ~/.gvimrc https://raw.githubusercontent.com/Mcube728/Archer/main/gvimrc
 echo 
 
 echo

@@ -23,3 +23,22 @@ set shiftwidth=4
 set expandtab
 set autoindent
 syntax on
+
+call plug#begin()
+    Plug 'junegunn/goyo.vim'
+call plug#end()
+
+let g:goyo_width='80%'
+
+function! s:goyo_enter()
+  set linebreak
+endfunction
+
+function! s:goyo_leave()
+  set nolinebreak
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+:map <F2> :Goyo<CR>
+":map <F3> :Goyo!
