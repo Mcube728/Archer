@@ -135,11 +135,12 @@ git clone git@github.com:mantissa-/mantis-theme.git ~/.themes       # Mantis the
 
 # Miscellaneous-----------------------------------------------------
 yes | sudo pacman -S foliate --noconfirm                            # Ebook Reader
+yes | sudo pacman -S marker --noconfirm                             # Markdown Editor
 yes | sudo pacman -S vlc --noconfirm                                # Video Player
 yes | sudo pacman -S mpv --noconfirm                                # Video Player
 yes | sudo pacman -S nomacs --noconfirm                             # Image Viewer
 yes | sudo pacman -S mpd --noconfirm                                # Music player daemon
-yes | sudo pacman -S ncmpcpp --noconfirm                            # Music player Client for mdp
+yes | sudo pacman -S ncmpcpp --noconfirm                            # Music player Client for mpd
 yes | sudo pacman -S ffmpeg  --noconfirm                            # Video Converter (Mental Outlaw has a great video on youtube on how you can record your screen from the terminal via ffmpeg!)
 
 # Backups
