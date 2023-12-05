@@ -38,39 +38,18 @@ yes | sudo pacman -S ntp --noconfirm                                # Package to
 yes | sudo pacman -S xf86-input-libinput --noconfirm                # Trackpad Drivers
 
 
-echo "INSTALLING DESKTOP ENVIRONMENT XFCE..."
+echo "INSTALLING DESKTOP ENVIRONMENT GNOME..."
 # The Desktop Environment-------------------------------------------
-yes | sudo pacman -S xfce4 --noconfirm                              # XFCE Desktop Environment
+yes | sudo pacman -S gnome --noconfirm                              # GNOME Desktop Environment
+yes | sudo pacman -S gnome-extra --noconfirm                        # Gnome extra packages
 yes | sudo pacman -S networkmanager --noconfirm                     # Network Connection Manager 
 yes | sudo pacman -S network-manager-applet --noconfirm             # System tray icon
 yes | sudo pacman -S nm-connection-editor --noconfirm               # GUI for Network Manager
 yes | sudo pacman -S engrampa --noconfirm                           # Archive Manager
-
-# I don't usually use all of the XFCE goodies, so I just install what I use.  
-sudo pacman -S mousepad --noconfirm 
-sudo pacman -S xfce4-whiskermenu-plugin --noconfirm
-sudo pacman -S thunar-archive-plugin --noconfirm 
-sudo pacman -S thunar-media-tags-plugin --noconfirm 
-sudo pacman -S xfburn --noconfirm 
-sudo pacman -S xfce4-battery-plugin --noconfirm 
-sudo pacman -S xfce4-clipman-plugin --noconfirm 
-sudo pacman -S xfce4-cpugraph-plugin --noconfirm 
-sudo pacman -S xfce4-datetime-plugin --noconfirm 
-sudo pacman -S xfce4-mount-plugin --noconfirm 
-sudo pacman -S xfce4-mpc-plugin --noconfirm 
-sudo pacman -S xfce4-netload-plugin --noconfirm 
-sudo pacman -S xfce4-notifyd --noconfirm 
-sudo pacman -S xfce4-pulseaudio-plugin --noconfirm 
-sudo pacman -S xfce4-screenshooter --noconfirm 
-sudo pacman -S xfce4-systemload-plugin --noconfirm 
-sudo pacman -S xfce4-taskmanager --noconfirm 
-sudo pacman -S xfce4-wavelan-plugin --noconfirm
-yes | sudo pacman -S thunar-volman --noconfirm                      # Thunar Volume management
-yes | sudo pacman -S gvfs --noconfirm                               # GNOME Virtual Filesystem(you need this for thunar to automoumt!!!)
+yes | sudo pacman -S gvfs --noconfirm                               # GNOME Virtual Filesystem(you need this for devices to automoumt!!!)
 yes | sudo pacman -S gvfs-smb --noconfirm                           # GVFS-SMB allows you to connect to servers from the file manager using the Server Message Block protocol
-sudo pacman -S xfce4-whiskermenu-plugin --noconfirm 
 echo
-echo "DONE INSTALLING DESKTOP ENVIRONMENT XFCE! :)"
+echo "DONE INSTALLING DESKTOP ENVIRONMENT GNOME! :)"
 echo
 
 
@@ -101,16 +80,9 @@ yes | sudo pacman -S jupyter-notebook
 
 # Productivity------------------------------------------------------
 yes | sudo pacman -S libreoffice-fresh --noconfirm                  # LibreOffice Suite
-yes | sudo pacman -S mousepad --noconfirm                           # Graphical text editor
-yes | sudo pacman -S qpdfview --noconfirm                               # PDF Viewer. Browsers make great pdf viewers too, so you can totally ditch this.
-
-# Disk Utilities----------------------------------------------------
-yes | sudo pacman -S gparted --noconfirm                            # Disk Utility
 
 # Graphics and Design-----------------------------------------------
-yes | sudo pacman -S nomacs --noconfirm                             # Image Viewing 
 yes | sudo pacman -S gcolor3 --noconfirm                            # Color Picker
-yes | sudo pacman -S inkscape --noconfirm                           # Vector Image Creation
 
 # Communications----------------------------------------------------
 yes | sudo pacman -S irssi --noconfirm                              # Terminal Based IRC Client
@@ -128,8 +100,6 @@ yes | sudo pacman -S terminus-font --noconfirm                      # Terminus F
 yes | sudo pacman -S noto-fonts-emoji --noconfirm                   # Emoji Fonts
 yes | sudo pacman -S kvantum-qt5 --noconfirm                        # SVG-based theme engine for Qt5 (including config tool and extra themes)
 yes | sudo pacman -S papirus-icon-theme                             # Papirus icon theme
-wget -qO- https://git.io/papirus-folders-install | sh               # change folder colours of papirus
-papirus-folders -l --them Papirus-Dark
 git clone git@github.com:mantissa-/mantis-theme.git ~/.themes       # Mantis theme for XFCE
 
 
@@ -152,15 +122,12 @@ echo
 #===================================================================
 # This section now takes care of the Display Manager. I chose LightDM. Feel free to replace LightDM with your choice of Display Manager. 
 echo
-echo "INSTALLING DISPLAY MANAGER-LIGHTDM..."
+echo "INSTALLING DISPLAY MANAGER GDM..."
 echo
-yes | sudo pacman -S lightdm  --noconfirm                           # Display/Login Manager
-yes | sudo pacman -S lightdm-gtk-greeter  --noconfirm               # Gtk Greeter
-yes | sudo pacman -S lightdm-gtk-greeter-settings  --noconfirm      # Settings for Lightdm
-yes | sudo pacman -S light-locker --noconfirm                       # Lightdm Locker 
-sudo systemctl enable lightdm 
+yes | sudo pacman -S gdm  --noconfirm                           # Display/Login Manager
+sudo systemctl enable gdm 
 echo
-echo "DONE INSTALLING DISPLAY MANAGER-LIGHTDM! :)"
+echo "DONE INSTALLING DISPLAY MANAGER GDM! :)"
 echo
 
 #===================================================================
